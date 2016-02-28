@@ -8,7 +8,7 @@ import android.app.Activity;
 public class Theme_Changer {
 
     private static int current_Theme;
-    public static boolean themeIsDark;
+    public static boolean blueTheme;
     public final static int THEME_LIGHT = 0;
     public final static int THEME_BLUE = 1;
 
@@ -25,11 +25,11 @@ public class Theme_Changer {
         {
             default:
             case THEME_LIGHT:
-                themeIsDark = false;
+                blueTheme = false;
                 activity.setTheme(R.style.Theme_1);
                 break;
             case THEME_BLUE:
-                themeIsDark = true;
+                blueTheme = true;
                 activity.setTheme(R.style.Theme_2);
                 break;
         }

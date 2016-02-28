@@ -18,7 +18,7 @@
     <style name="NumStyle">
 
         <item name="android:textStyle">bold</item>
-        <item name="android:textSize">@dimen/numSize</item>
+        <item name="android:textSize">@dimen/big_numSize</item>
         <item name="android:hint">@string/hint</item>
     </style>
 </resources>

@@ -52,10 +52,8 @@ public class MainActivity extends Activity {
         edit_text_operation.setOnClickListener(operatorL);
 
         switchTheme = (Switch) findViewById(R.id.theme_switch);
-        switchTheme.setChecked(Theme_Changer.themeIsDark);
+        switchTheme.setChecked(Theme_Changer.blueTheme);
         switchTheme.setOnCheckedChangeListener(sw);
-
-
     }
 
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -132,31 +130,30 @@ public class MainActivity extends Activity {
             operators.add(3, "/");
             operators.add(4, "*");
 
-
-
             if (operator.equals(operators.get(0))) {
                 text_result.setText(R.string.choose);
             }
-            if (operator.equals(operators.get(1))) {
+            else if (operator.equals(operators.get(1))) {
                 dNumber_c = dNumber_a + dNumber_b;
                 text_result.setText(String.valueOf(dNumber_c));
             }
-            if (operator.equals(operators.get(2))) {
+            else if (operator.equals(operators.get(2))) {
                 dNumber_c = dNumber_a - dNumber_b;
                 text_result.setText(String.valueOf(dNumber_c));
             }
-            if (operator.equals(operators.get(3))) {
+            else if (operator.equals(operators.get(3))) {
                 dNumber_c = dNumber_a / dNumber_b;
                 text_result.setText(String.valueOf(dNumber_c));
             }
-            if (operator.equals(operators.get(4))) {
+            else if (operator.equals(operators.get(4))) {
                 dNumber_c = dNumber_a * dNumber_b;
                 text_result.setText(String.valueOf(dNumber_c));
+            }   else {
+                Toast.makeText(MainActivity.this, "Only /,*,-,+ accepted", Toast.LENGTH_SHORT).show();
             }
-
         }
-
     };
+
     OnClickListener operatorL = new OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -192,6 +189,4 @@ public class MainActivity extends Activity {
             text_view_b.setText(A);
         }
     }
-
-
 }
