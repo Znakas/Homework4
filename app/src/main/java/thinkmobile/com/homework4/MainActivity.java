@@ -150,6 +150,8 @@ public class MainActivity extends Activity {
                 text_result.setText(String.valueOf(dNumber_c));
             }   else {
                 Toast.makeText(MainActivity.this, "Only /,*,-,+ accepted", Toast.LENGTH_SHORT).show();
+                edit_text_operation.setText("");
+
             }
         }
     };
